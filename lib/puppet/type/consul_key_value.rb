@@ -20,7 +20,7 @@ Puppet::Type.newtype(:consul_key_value) do
     defaultto 0
   end
 
-  newparam(:value) do
+  newproperty(:value) do
     desc 'The key value string'
     validate do |value|
       raise ArgumentError, "The key value must be a string" if not value.is_a?(String)
